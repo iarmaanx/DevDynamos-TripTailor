@@ -12,7 +12,7 @@ document.getElementById('travel-form').addEventListener('submit', async function
   const requestData = {
     contents: [{
       parts: [{
-        text: `Suggest a travel destination based on the following preferences:\nLocation: ${currentLocation}\nBudget: ${budget} INR\nDays: ${days}\nPreferences: ${preferences}`
+        text: `Give the answer in bullet points Suggest a travel destination based on the following preferences:\nLocation: ${currentLocation}\nBudget: ${budget} INR\nDays: ${days}\nPreferences: ${preferences}`
       }]
     }]
   };
