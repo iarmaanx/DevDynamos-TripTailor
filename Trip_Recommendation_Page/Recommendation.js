@@ -1,4 +1,3 @@
-// API_KEY ='AIzaSyAqnedwm6RPYv0OO4Q5FBNDDCIyHWmfyJU'
 API_KEY ='AIzaSyA0AmffS6q_m8Uv3EBiZqVp5b6PBZRUg3s'
 document.getElementById('travel-form').addEventListener('submit', async function(event) {
   event.preventDefault();
@@ -12,7 +11,7 @@ document.getElementById('travel-form').addEventListener('submit', async function
   const requestData = {
     contents: [{
       parts: [{
-        text: `Give the answer in bullet points Suggest a travel destination based on the following preferences:\nLocation: ${currentLocation}\nBudget: ${budget} INR\nDays: ${days}\nPreferences: ${preferences}`
+        text: `Suggest a travel destination based on the following preferences:\nLocation: ${currentLocation}\nBudget: ${budget} INR\nDays: ${days}\nPreferences: ${preferences}`
       }]
     }]
   };
@@ -38,17 +37,7 @@ document.getElementById('travel-form').addEventListener('submit', async function
       if (data.candidates && data.candidates.length > 0) {
         // Extract the recommendation text from the response
         const recommendationText = data.candidates[0].content.parts[0].text || 'No content available';
-        const recommendationResult = document.getElementById('recommendation-result');
-    recommendationResult.innerHTML = `
-      <div class="recommendation-card show">
-        <div class="card-header">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Your Travel Recommendation</h3>
-        </div>
-        <p  id="recommendation-text">${recommendationText}</p>
-        <button id="explore-btn">Explore More</button>
-      </div>
-    `;
+        document.getElementById('recommendation-text').textContent = recommendationText;
       } else {
         document.getElementById('recommendation-text').textContent = 'No recommendations available at this time.';
       }

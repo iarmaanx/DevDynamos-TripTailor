@@ -93,13 +93,11 @@ body {
 
 #recommendation h1 {
   font-size: 3rem;
-  background: #FFD369;
+  background: linear-gradient(45deg, var(--accent-color), #00FFC6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
   letter-spacing: 2px;
-  /* color: red; */
-
 }
 
 .form-container {
@@ -136,8 +134,8 @@ body {
 .form-container button {
   width: 100%;
   padding: 15px;
-  background-color:  #FFD369;
-  /* color: var(--primary-bg); */
+  background: linear-gradient(45deg, var(--accent-color), #00FFC6);
+  color: var(--primary-bg);
   border: none;
   border-radius: 10px;
   font-size: 1.1rem;
@@ -168,7 +166,6 @@ body {
 @media screen and (max-width: 480px) {
   #recommendation h1 {
     font-size: 1.8rem;
-  
   }
 
   .form-container input,
@@ -182,7 +179,7 @@ body {
   font-weight: 600;
   border: none;
   border-radius: 6px;
-  background: #FFD369;
+  background: linear-gradient(45deg, var(--accent-color), #00FFC6);
   transition: all .3s ease;
 }
 
@@ -352,12 +349,4 @@ footer {
   .contact-info li {
     justify-content: center;
   }
-}
-
-#recommendation-text{
-  margin-top: 4px;
-  padding: 14px;
-  font-size: large;
-  display: flex;
-  padding-bottom: 20px;
 }
